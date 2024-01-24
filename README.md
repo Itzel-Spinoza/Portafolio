@@ -8,4 +8,4 @@ Son los scripts de la base de datos pertenecientes al punto de venta de la papel
 y como generar IDS, o realizar ciertas consultas. 
 
 "PlataformaCursosEnWeb" 
-Prototipo básico de una realizada con HTML, JavaScript y PHP donde se suben cursos y lecciones. 
+Prototipo básico de una plataforma realizada con HTML, JavaScript y PHP donde se suben cursos y lecciones. 
