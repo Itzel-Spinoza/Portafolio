@@ -1,0 +1,527 @@
+/* General*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Lato', sans-serif;
+	line-height: 1;
+
+}
+
+body {
+	background-color: #F5F6F8;
+	overflow: hidden;
+}
+
+
+
+/* MENU */
+.sidebar-navigation {
+	margin-left: 20px;
+	margin-top: 0; 
+	display: inline-block;
+	min-height: 100vh;
+	width: 80px;
+	background-color: #0A0767;
+	/*float: left;*/
+	border-radius: 25px;
+	position:fixed; 
+	
+	
+}
+
+.sidebar-navigation ul {
+	text-align: center;
+	color: white;
+}
+
+.sidebar-navigation ul li {
+	padding: 28px 0;
+	cursor: pointer;
+	transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li i {
+	display: block;
+	font-size: 24px;
+	transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+	display: inline-block;
+	position: absolute;
+	background-color: #0A0767;
+	padding: 8px 15px;
+	border-radius: 3px;
+	margin-top: -26px;
+	left: 90px;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 13px;
+	letter-spacing: .5px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -4px;
+	top: 10px;
+	transform: rotate(45deg);
+	width: 10px;
+	height: 10px;
+	background-color: inherit;
+	
+}
+
+.sidebar-navigation ul li:hover {
+	background-color: #9895D6;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+	background-color: #9895D6;
+}
+
+.sidebar-navigation ul li.active i {
+	color: #ffff;
+}
+
+  /*BOTON DE USUARIO*/
+
+  a {
+    text-decoration: none;
+	color: #ffff;
+  }
+.menu-usuario {
+	position: relative;
+	display: inline-block;
+	float: right; 
+	
+  }
+
+
+  
+  .menu-button {
+	margin-top: 10px;
+	margin-right: 10px;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-color: #9895D6;
+	cursor: pointer;
+	border-radius: 100px;
+
+  }
+  
+  .menu-list {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #0A0767;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	width: auto; /* Ajustar el ancho automáticamente */
+	min-width: 150px; /* Ancho mínimo para evitar que se contraiga demasiado */
+  }
+  
+  .menu-list li {
+	padding: 10px;
+  }
+  
+  .menu-list li:hover {
+	background-color: #9895D6;
+	
+  }
+  
+  .menu-usuario:hover .menu-list {
+	display: block;
+  }
+
+/*CONTENIDO PAGINA*/
+  .content {
+	margin-left: 150px; /* Ajusta el valor según el ancho de tu barra de menú */
+	padding: 20px;
+  }
+  /*.content h1 {
+	margin-top: 0;
+  }*/
+
+  /*TITULOS*/
+
+  fixed-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f8f8f8;
+	padding: 20px;
+	text-align: center;
+  }
+
+  h3{
+	margin-top: 10px;
+	margin-bottom: 5px;
+  }
+
+ h6{
+	color:#888;
+ }
+
+  /*SEPARADORES EN LINEAS*/
+  .separator {
+	border: none;
+	border-top: 1px solid black; /* Puedes ajustar el color y grosor de la línea */
+	
+	margin-bottom: 8px; /* Puedes ajustar el margen superior e inferior de la línea */
+  }
+
+  /*OPCIONES DE FILTRO*/
+  .option-filter{
+	margin-top:10px;
+  }
+  .color-change-button {
+	background-color: #BCC3D0; /* Color inicial del botón */
+	border-radius: 25px;
+	color: white; /* Color del texto */
+	padding: 10px 20px; /* Espaciado interno */
+	border: none; /* Sin borde */
+	cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  
+  .color-change-button:active {
+	background-color: #0A0767; /* Color al ser presionado */
+  }
+
+  /*BOTONES DE OPCIONES*/ 
+  .options-buttons {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: flex-end; 
+	
+  }
+  
+  .button {
+	margin: 0 5px;
+	padding: 10px 20px;
+	background-color: #0A0767;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	margin-right: 25px;
+	color: #fff;
+  }
+
+  .button-canceled{
+	margin: 0 5px;
+	padding: 10px 20px;
+	background-color: #000;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	margin-right: 25px;
+	color: #fff;
+  }
+
+  /*FORMULARIO PARA CREAR CLASE*/
+  .modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+  }
+  
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .formulario {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+  }
+  
+  .form-group {
+	margin-bottom: 20px;
+  }
+  
+  label {
+	display: block;
+	margin-top:5px;
+	margin-bottom: 5px;
+	font-weight: bold;
+  }
+  
+  input[type="text"],
+  select,
+  textarea {
+	width: calc(100% - 30px);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 35px;
+  }
+  
+  input[type="submit"] {
+	display: block; /* Agregado */
+	margin-top: 10px; /* Agregado */
+	background-color: #0A0767;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+	background-color: #9895D6;
+  }
+
+    /*FORMULARIO PARA ELIMINAR CLASE*/
+
+	.modal2 {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+	  }
+	  
+	  .modal-content2 {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	  }
+
+	  .close2 {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+	  }
+	  
+	  .close2:hover,
+	  .close2:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	  }
+
+	  /*CARDS DE LAS MATERIAS*/
+
+	  .card {
+		margin-top: 20px; 
+		display: grid;
+		grid-template-columns: auto 1fr;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+		border: 1px solid #000;
+		border-radius: 25px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		margin-bottom: 20px;
+	  }
+	  
+	  .card img {
+		width: 100%;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px; /* Ajustamos el borde inferior izquierdo */
+	  }
+	  
+	  .card-body {
+		flex: 1; /* Ocupa todo el espacio disponible */
+		display: flex; /* Activa Flexbox */
+		flex-direction: column; /* Apila los elementos verticalmente */
+		justify-content: center; /* Centra verticalmente los elementos */
+		padding: 10px;
+		text-align: right; /* Alineación del texto a la derecha */
+	  }
+	  
+	  .card-title2 {
+		font-size: 20px;
+		margin-top: 10px;
+		margin-left: 10px;
+		
+	  }
+	  
+	  .card-description {
+		margin-bottom: 10px;
+		margin-left: 10px;
+	  }
+
+	  .button2 {
+		margin: 0 5px;
+		margin-bottom: 10px;
+		padding: 10px 20px;
+		background-color: #0A0767;
+		border: none;
+		border-radius: 25px;
+		cursor: pointer;
+		
+		color: #fff;
+	  }
+	  
+	  
+	/*FORMULARIO PARA AÑADIR LECCIÓN*/
+
+	.modal3 {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+	  }
+	  
+	  .modal-content3 {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	  }
+
+	  .close3 {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+	  }
+	  
+	  .close3:hover,
+	  .close3:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	  }
+
+	/*FORMULARIO PARA ELIMINAR LECCIÓN*/
+
+	.modal4 {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+	  }
+	  
+	  .modal-content4 {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	  }
+
+	  .close4 {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+	  }
+	  
+	  .close4:hover,
+	  .close4:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	  }
+
+/*CARD DE MATERIA EN CALIFICAR TAREA*/
+
+.card4 {
+	
+	margin-top: 20px; 
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 10px;
+	width: 50%;
+	border: 1px solid #000;
+	border-radius: 25px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+  }
+  
+  .card img4 {
+	width: 100%;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px; /* Ajustamos el borde inferior izquierdo */
+  }
+  
+  .card-body4 {
+	flex: 1; /* Ocupa todo el espacio disponible */
+	display: flex; /* Activa Flexbox */
+	flex-direction: column; /* Apila los elementos verticalmente */
+	justify-content: center; /* Centra verticalmente los elementos */
+	padding: 10px;
+	text-align: right; /* Alineación del texto a la derecha */
+  }
+  
+  .card-title4{
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+	
+  }
+  
+  .card-description4{
+	margin-bottom: 10px;
+	margin-left: 10px;
+  }
+
+  
+  

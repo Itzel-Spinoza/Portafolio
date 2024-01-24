@@ -1,0 +1,308 @@
+/* General*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+
+}
+
+body {
+    background-color: #F5F6F8;
+    overflow: hidden;
+}
+
+
+
+/* MENU */
+.sidebar-navigation {
+    margin-left: 20px;
+    margin-top: 0;
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color: #0A0767;
+    /*float: left;*/
+    border-radius: 25px;
+    position: fixed;
+
+
+}
+
+.sidebar-navigation ul {
+    text-align: center;
+    color: white;
+}
+
+.sidebar-navigation ul li {
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #0A0767;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+
+}
+
+.sidebar-navigation ul li:hover {
+    background-color: #9895D6;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+    background-color: #9895D6;
+}
+
+.sidebar-navigation ul li.active i {
+    color: #ffff;
+}
+
+/*BOTON DE USUARIO*/
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.menu-usuario {
+    position: relative;
+    display: inline-block;
+    float: right;
+
+}
+
+
+
+.menu-button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-color: #9895D6;
+    cursor: pointer;
+    border-radius: 100px;
+
+}
+
+.menu-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #0A0767;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: auto;
+    /* Ajustar el ancho automáticamente */
+    min-width: 150px;
+    /* Ancho mínimo para evitar que se contraiga demasiado */
+}
+
+.menu-list li {
+    padding: 10px;
+}
+
+.menu-list li:hover {
+    background-color: #9895D6;
+
+}
+
+.menu-usuario:hover .menu-list {
+    display: block;
+}
+
+/*CONTENIDO PAGINA*/
+.content {
+    margin-left: 150px;
+    /* Ajusta el valor según el ancho de tu barra de menú */
+    padding: 20px;
+}
+
+/*.content h1 {
+	margin-top: 0;
+  }*/
+
+/*TITULOS*/
+
+fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h6 {
+    color: #888;
+}
+
+/*SEPARADORES EN LINEAS*/
+.separator {
+    border: none;
+    border-top: 1px solid black;
+    /* Puedes ajustar el color y grosor de la línea */
+
+    margin-bottom: 8px;
+    /* Puedes ajustar el margen superior e inferior de la línea */
+}
+
+/*BOTONES DE OPCIONES*/
+.options-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #0A0767;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+    color: #fff;
+}
+
+.button-canceled {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+    color: #fff;
+}
+/* recibe los datos*/
+.card {
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chat-window {
+    height: 220px;
+    overflow-y: scroll;
+}
+
+.message-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+/* REecurso extra*/
+.container {
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inpdddut[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #1E90FF;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.inpdddut[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0000FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inpdddut[type="submit"]:hover {
+    background-color: #0000CD;
+}
+

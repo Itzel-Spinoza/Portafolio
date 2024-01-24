@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+    <link rel="stylesheet" href="calificarTarea.css">
+    <link href="fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <title>Tareas</title>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body>
+    <div class="menu-usuario">
+        <button class="menu-button"><i class="fa-solid fa-user" style="color: #605caa;"></i></button>
+        <ul class="menu-list">
+            <li><a href="#">Datos usuario</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <nav class="sidebar-navigation">
+        <ul>
+            <li>
+                <i class="fa"><img src="imagenes/cloverlogo.png"></i>
+                <span class="tooltip">Clover</span>
+            </li>
+            <li>
+                <a href="inicioMaestro.html">
+                    <i class="fa fa-solid fa-house" style="color: #ffffff"></i>
+                    <span class="tooltip">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="clasesImpartidas.html">
+                    <i class="fa-solid fa-book" style="color: #ffffff;"></i>
+                    <span class="tooltip">Clases impartidas</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-pen" style="color: #ffffff;"></i>
+                <span class="tooltip">Tareas</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-calendar" style="color: #ffffff;"></i>
+                <span class="tooltip">Calendario</span>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="fixed-header">
+            <h1>Tareas</h1>
+            <h3>Alumno</h3>
+            <hr class="separator">
+        </div>
+
+
+        <div class="card3">
+            <div class="card2">
+                <div class="card-body">
+                <h3 class="card-title3">Archivo de tarea:</h3>
+                <div class="file-section">
+                    <a href="ruta_del_archivo_tarea" download>Descargar tarea</a>
+                </div>
+                </div>
+                </div>
+
+                <div class="card4">
+                    <!--<img src="imagen_curso.jpg" alt="Imagen del curso">-->
+                    <div class="card-body2">
+                        <h3 class="card-title2">Calificacion:</h3>
+                        <div class="input-container">
+                            <input type="number" name="calificacion" id="calificacion" min="50" max="100" step="1" required>
+                        </div>
+                        <h3 class="card-title2">Comentarios:</h3>
+                        <div class="comment-section">
+                            <textarea id="comment" name="comment" rows="4"></textarea>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-buttons">
+            <button id="open-modal" class="button">Calificar tareas</button>
+            <button id="open-modal2" class="button">Agregar tareas</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

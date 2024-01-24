@@ -1,0 +1,286 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+/* General*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+
+}
+
+body {
+    background-color: #F5F6F8;
+    overflow: hidden;
+}
+
+
+
+/* MENU */
+.sidebar-navigation {
+    margin-left: 20px;
+    margin-top: 0;
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color: #0A0767;
+    /*float: left;*/
+    border-radius: 25px;
+    position: fixed;
+
+
+}
+
+.sidebar-navigation ul {
+    text-align: center;
+    color: white;
+}
+
+.sidebar-navigation ul li {
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #0A0767;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+
+}
+
+.sidebar-navigation ul li:hover {
+    background-color: #9895D6;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+    background-color: #9895D6;
+}
+
+.sidebar-navigation ul li.active i {
+    color: #ffff;
+}
+
+/*BOTON DE USUARIO*/
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.menu-usuario {
+    position: relative;
+    display: inline-block;
+    float: right;
+
+}
+
+
+
+.menu-button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-color: #9895D6;
+    cursor: pointer;
+    border-radius: 100px;
+
+}
+
+.menu-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #0A0767;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: auto;
+    /* Ajustar el ancho automáticamente */
+    min-width: 150px;
+    /* Ancho mínimo para evitar que se contraiga demasiado */
+}
+
+.menu-list li {
+    padding: 10px;
+}
+
+.menu-list li:hover {
+    background-color: #9895D6;
+
+}
+
+.menu-usuario:hover .menu-list {
+    display: block;
+}
+
+/*CONTENIDO PAGINA*/
+.content {
+    margin-left: 150px;
+    /* Ajusta el valor según el ancho de tu barra de menú */
+    padding: 20px;
+}
+
+/*TITULOS*/
+h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+/*SEPARADORES EN LINEAS*/
+.separator {
+    border: none;
+    border-top: 1px solid black;
+    /* Puedes ajustar el color y grosor de la línea */
+
+    margin-bottom: 8px;
+    /* Puedes ajustar el margen superior e inferior de la línea */
+}
+
+/*OPCIONES DE FILTRO*/
+.option-filter {
+    margin-top: 10px;
+}
+
+.color-change-button {
+    background-color: #BCC3D0;
+    /* Color inicial del botón */
+    border-radius: 25px;
+    color: white;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+}
+
+.color-change-button:active {
+    background-color: #0A0767;
+    /* Color al ser presionado */
+}
+
+
+.card {
+    margin-top: 20px;
+    width: 100%;
+    max-width: auto;
+    height: 170px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card:hover>.img {
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(#9198e5, #712020);
+}
+
+.img2 {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#dbeddc, #b8daba);
+}
+
+.card:hover>.img2 {
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(#b8daba, #48a259);
+}
+
+.textBox {
+    width: calc(100% - 90px);
+    margin-left: 10px;
+    color: black;
+    font-family: 'Poppins' sans-serif;
+}
+
+.textContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.span {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+

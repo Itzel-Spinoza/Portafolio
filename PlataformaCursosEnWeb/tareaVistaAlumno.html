@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+    <link rel="stylesheet" href="tareaVistaAlumno.css">
+    <link href="fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <title>Tareas</title>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body>
+    <div class="menu-usuario">
+        <button class="menu-button"><i class="fa-solid fa-user" style="color: #605caa;"></i></button>
+        <ul class="menu-list">
+            <li><a href="#">Datos usuario</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <nav class="sidebar-navigation">
+        <ul>
+            <li>
+                <i class="fa"><img src="imagenes/cloverlogo.png"></i>
+                <span class="tooltip">Clover</span>
+            </li>
+            <li>
+                <a href="inicioAlumno.html">
+                <i class="fa fa-solid fa-house" style="color: #ffffff"></i>
+                <span class="tooltip">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="clasDisAlum.html">
+                <i class="fa-solid fa-school" style="color: #ffffff;"></i>
+                <span class="tooltip">Clases disponibles</span>
+            </li>
+            <li>
+                <a href="claseAlumno.html">
+                <i class="fa-solid fa-book" style="color: #ffffff;"></i>
+                <span class="tooltip">Mis clases</span>
+                </a>
+            </li>
+            <li>
+                <a href="tareaAlumno.html">
+                <i class="fa-solid fa-pen" style="color: #ffffff;"></i>
+                <span class="tooltip">Tareas</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-calendar" style="color: #ffffff;"></i>
+                <span class="tooltip">Calendario</span>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="fixed-header">
+            <h1>Tareas</h1>
+        </div>
+
+        <div class="card">
+            
+            <div class="textBox">
+                <div class="textContent">
+                    <span>Entregado</span>
+                    <p></p>
+                    <hr class="separator">
+                    
+                    
+                    <label for="datetime">Fecha y Hora:</label>
+                    <input type="datetime-local" id="datetime" name="datetime" readonly>
+                <!-- </div>
+                <p class="p">Programacion en python</p>
+                <div> -->
+                </div>
+                <div class="card2">
+                    <div class="chat-header">Descripción</div>
+                    <div class="chat-window">
+                        <ul class="message-list"></ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="card3">
+            <div class="container">
+                <form>
+                    <label for="arquivo">Mi trabajo</label>
+                    <hr class="separator">
+                    <input accept=".jpg, .jpeg, .png, .gif, .pdf" class="inpdddut" name="arquivo" id="arquivo" type="file">
+                    <input value="Subir" type="submit" class="inpdddut">
+                </form>
+            </div>
+        
+            <div class="car4">
+                <!--<img src="imagen_curso.jpg" alt="Imagen del curso">-->
+                <div class="card-body2">
+                    <h3 class="card-title2">Calificacion:</h3>
+                    <div class="input-container">
+                        <input type="number" name="calificacion" id="calificacion" min="50" max="100" step="1" required>
+                    </div>
+                    <h3 class="card-title2">Comentarios:</h3>
+                    <div class="comment-section">
+                        <textarea id="comment" name="comment" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        <div class="options-buttons">
+            <button id="open-modal2" class="button">Subir archivo</button>
+            <button id="open-modal2" class="button">Cancelar</button>
+            <button id="open-modal2" class="button">Entregar</button>
+        </div>
+        
+        </div>
+
+    </div>
+
+</body>
+
+</html>

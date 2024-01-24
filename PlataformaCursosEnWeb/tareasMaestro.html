@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    
+
+<head>
+    <link rel="stylesheet" href="estilos2.css">
+    <link href="fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+  <title>Tareas</title>    
+    <meta charset="UTF-8" />
+    
+</head>
+
+<body>
+    <div class="menu-usuario">
+        <button class="menu-button"><i class="fa-solid fa-user" style="color: #605caa;"></i></button>
+        <ul class="menu-list">
+          <li><a href="#">Datos usuario</a></li>
+          <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+    </div>    
+
+    <nav class="sidebar-navigation">
+        <ul>
+            <li>
+                <i class="fa"><img src="imagenes/cloverlogo.png"></i>
+                <span class="tooltip">Clover</span>
+            </li>		
+            <li>
+                <a href="inicioMaestro.html">
+                <i class="fa fa-solid fa-house" style="color: #ffffff"></i>
+                <span class="tooltip">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="clasesImpartidas.html">
+                <i class="fa-solid fa-book" style="color: #ffffff;"></i>
+                <span class="tooltip">Clases impartidas</span>
+                </a>
+            </li>
+            <li>
+                <a href="tareasMaestro.html">
+                <i class="fa-solid fa-pen" style="color: #ffffff;"></i>
+                <span class="tooltip">Tareas</span>
+                </a>
+            </li>
+            <li>
+                <a href="clasesImpartidas.html">
+                <i class="fa-solid fa-calendar" style="color: #ffffff;"></i>
+                <span class="tooltip">Calendario</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class = "content">
+        <div class="fixed-header">
+            <h1>Tareas</h1>
+            <h3>Tareas asignadas</h3>
+            <hr class="separator">
+            <h6>Filtrar</h6>
+        </div>
+        <div class="option-filter">
+            <button id= "filter1" class="color-change-button">Asignadas</button>
+            <button id= "filter2" class="color-change-button">Completado</button>
+            <button id= "filter3" class="color-change-button">Vencido</button>
+        </div>
+        
+        <div class="card">
+            <!--<img src="imagen_curso.jpg" alt="Imagen del curso">-->
+            <div class="card-body2">
+              <h3 class="card-title2">Titulo de la tarea</h3>
+              <p class="card-description">Clase</p>
+              <button id= "open-modal5" class="button2"><a href="#">Editar tarea</a></button>
+              <button id= "open-modal6" class="button2"><a href="#">Ver tarea</a></button>
+             
+            </div>
+        </div>
+
+        <div class="options-buttons">
+            <button id= "open-modal" class="button">Calificar tareas</button>
+            <button id= "open-modal2" class="button">Agregar tareas</button>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Calificar tareas</h2>
+            <form>
+                <!-- Contenido del formulario -->
+                <label for="nombre">Nombre del curso:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera" required>
+                    <option value="industrial">Ingeniería Industrial</option>
+                    <option value="sistemas">Ingeniería en Sistemas Computacionales</option>
+                    <option value="bioquimica">Ingeniería Bioquímica</option>
+                    <option value="electro">Ingeniería Electromécanica</option>
+                    <option value="civil">Ingeniería Civil</option>
+                    <option value="tics">Ingeniería en Tecnologías de la Información y Comunicación</option>
+                    <option value="ambiental">Ingeniería Ambiental</option>
+                    <option value="gestion">Ingeniería en Gestión Empresarial</option>
+                    <option value="petrolera">Ingeniería Petrolera</option>
+                </select>
+               
+        
+                <label for="descripcion">Descripción: </label>
+                <input type="text" id="descripcion" name="descripcion" required>
+
+                <input type="submit" value="Crear clase">
+            </form>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal2">
+            <div class="modal-content2">
+              <span class="close2">&times;</span>
+              <h2>Nueva tarea</h2>
+            <form form action="creartarea.php" method="POST">
+                <!-- Contenido del formulario -->
+                <label for="titulotarea">Título de la tarea</label>
+                <input type="text" id="titulotarea" name="titulotarea" required>
+
+                <label for="descripcion">Descripción </label>
+                <input type="text" id="descripcion" name="descripcion" required>
+
+                <label for="recursosextra">Link del recurso: </label>
+                <input type="text" id="recursosextra" name="recursosextra">
+
+                <label for="datetime">Fecha y Hora:</label>
+                <input type="datetime-local" id="datetime" name="datetime">
+                
+                <input type="submit" value="Asignar tarea">
+            </form>
+            </div>
+        </div>        
+
+    </div>
+    <script>
+
+        document.getElementById("open-modal2").addEventListener("click", function() {
+            document.getElementById("modal2").style.display = "block";
+        });
+  
+        document.getElementsByClassName("close2")[0].addEventListener("click", function() {
+            document.getElementById("modal2").style.display = "none";
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+/* General*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+
+}
+
+body {
+    background-color: #F5F6F8;
+    overflow: hidden;
+}
+
+
+
+/* MENU */
+.sidebar-navigation {
+    margin-left: 20px;
+    margin-top: 0;
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color: #0A0767;
+    /*float: left;*/
+    border-radius: 25px;
+    position: fixed;
+
+
+}
+
+.sidebar-navigation ul {
+    text-align: center;
+    color: white;
+}
+
+.sidebar-navigation ul li {
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #0A0767;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+
+}
+
+.sidebar-navigation ul li:hover {
+    background-color: #9895D6;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+    background-color: #9895D6;
+}
+
+.sidebar-navigation ul li.active i {
+    color: #ffff;
+}
+
+/*BOTON DE USUARIO*/
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.menu-usuario {
+    position: relative;
+    display: inline-block;
+    float: right;
+
+}
+
+
+
+.menu-button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-color: #9895D6;
+    cursor: pointer;
+    border-radius: 100px;
+
+}
+
+.menu-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #0A0767;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: auto;
+    /* Ajustar el ancho automáticamente */
+    min-width: 150px;
+    /* Ancho mínimo para evitar que se contraiga demasiado */
+}
+
+.menu-list li {
+    padding: 10px;
+}
+
+.menu-list li:hover {
+    background-color: #9895D6;
+
+}
+
+.menu-usuario:hover .menu-list {
+    display: block;
+}
+
+/*CONTENIDO PAGINA*/
+.content {
+    margin-left: 150px;
+    /* Ajusta el valor según el ancho de tu barra de menú */
+    padding: 20px;
+}
+
+/*.content h1 {
+	margin-top: 0;
+  }*/
+
+/*TITULOS*/
+
+fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: #888;
+}
+
+/*SEPARADORES EN LINEAS*/
+.separator {
+    border: none;
+    border-top: 1px solid black;
+    /* Puedes ajustar el color y grosor de la línea */
+
+    margin-bottom: 8px;
+    /* Puedes ajustar el margen superior e inferior de la línea */
+}
+
+/*BOTONES DE OPCIONES*/
+.options-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #0A0767;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+    color: #fff;
+}
+
+.button-canceled {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+    color: #fff;
+}
+
+
+/*CARDS DE LAS MATERIAS*/
+.card3 {
+    padding: 10px 10px;
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    border: 1px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    width: 35%;
+    margin-left: auto;
+    border: 1px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-body2 {
+    flex: 1;
+    /* Ocupa todo el espacio disponible */
+    display: flex;
+    /* Activa Flexbox */
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    justify-content: center;
+    /* Centra verticalmente los elementos */
+    padding: 10px;
+    text-align: auto;
+    /* Alineación del texto a la derecha */
+}
+
+.card-title2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.card-description {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.button2 {
+    margin: 0 5px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #0A0767;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+
+    color: #fff;
+}
+
+
+.input-container {
+    top: auto;
+    right: auto;
+    left: auto;
+}
+
+.input-container input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-container input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+}
+
+.comment-section {
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.comment-section label {
+    display: block;
+    font-weight: bold;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.card2 {
+    top: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin-right: auto;
+    border: 1px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    flex: 1;
+    /* Ocupa todo el espacio disponible */
+    display: flex;
+    /* Activa Flexbox */
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    justify-content: center;
+    /* Centra verticalmente los elementos */
+    padding: 10px;
+    text-align: auto;
+    /* Alineación del texto a la derecha */
+}
+
+.card-title3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.file-section a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.file-section a:hover {
+    background-color: #0056b3;
+}
