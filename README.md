@@ -7,3 +7,5 @@ Proyecto para la materia de Fundamentos de Ingenieria de Software. Es un punto d
 Son los scripts de la base de datos pertenecientes al punto de venta de la papelería. El archivo "ohmymarkers3_routines" contiene todos los procedimientos almacenados realizados para automatizar operaciones en la base de datos, tal 
 y como generar IDS, o realizar ciertas consultas. 
 
+"PlataformaCursosEnWeb" 
+Prototipo básico de una realizada con HTML, JavaScript y PHP donde se suben cursos y lecciones. 
