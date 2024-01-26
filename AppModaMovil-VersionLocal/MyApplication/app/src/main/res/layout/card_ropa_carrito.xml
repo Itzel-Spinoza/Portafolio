@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardPrendaCarrito"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp"
+    android:layout_marginEnd="8dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtCardNombrePrenda"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/imageView5"
+            android:text="NombrePrenda"
+            android:fontFamily="@font/poppins_semibold"/>
+            />
+
+        <TextView
+            android:id="@+id/txtCardTalla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCardNombrePrenda"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/imageView5"
+            android:text="Talla:" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="87dp"
+            android:layout_height="109dp"
+            app:srcCompat="@drawable/imagennodisponible" />
+
+        <TextView
+            android:id="@+id/cardTallaaaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCardNombrePrenda"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/txtCardTalla"
+            android:text="talla"
+            android:textColor="@color/gris_oscuro"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/signo_pesos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCardTalla"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/imageView5"
+            android:text="$"
+            android:textColor="@color/azul_intenso"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/cardTotalPrendaaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCardTalla"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/signo_pesos"
+            android:text="TextView"
+            android:textColor="@color/azul_intenso"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/txtDonastee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signo_pesos"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/imageView5"
+            android:text="Donaste: " />
+
+        <TextView
+            android:id="@+id/cardTotalDonativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardTotalPrendaaa"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/txtDonastee"
+            android:textColor="@color/gris_oscuro"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="$" />
+
+        <TextView
+            android:id="@+id/txtVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDonastee"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/imageView5"
+            android:text="Vendido por:" />
+
+        <TextView
+            android:id="@+id/cardNombreVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardTotalDonativo"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toEndOf="@+id/txtVendedor"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/gris_oscuro"
+            android:text="TextView" />
+
+        <ImageButton
+            android:id="@+id/btnEliminarPrendaCarrito"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="76dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toEndOf="@+id/txtCardNombrePrenda"
+            app:srcCompat="@drawable/eliminar" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp"
+    android:layout_marginEnd="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/cardTipoTarj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/tipo_tarj"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/cardNoTarj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardTipoTarj"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/num_tarjeta"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cardTitularTarj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardNoTarj"
+            android:layout_marginTop="10dp"
+            android:text="@string/nom_titular"
+            android:fontFamily="@font/poppins"/>
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

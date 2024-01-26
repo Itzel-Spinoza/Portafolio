@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado2"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarDirecciones"
+    >
+
+    <TextView
+        android:id="@+id/txtDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/btn_direcciones"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAgDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/agregar_nueva_dir"
+        android:visibility="gone"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler1" />
+
+    <TextView
+        android:id="@+id/txtCalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/calle"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAgDir" />
+
+    <EditText
+        android:id="@+id/edtCalle"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/borde_redondeado"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="text"
+        android:textColor="@color/gris_claro"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCalle" />
+
+    <TextView
+        android:id="@+id/txtCol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/col"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCalle" />
+
+    <EditText
+        android:id="@+id/edtColonia"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/borde_redondeado"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="text"
+        android:textColor="@color/gris_claro"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCol" />
+
+    <TextView
+        android:id="@+id/edtNoExt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/no_ext"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtColonia" />
+
+    <EditText
+        android:id="@+id/txtNoExt"
+        android:layout_width="132dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/borde_redondeado"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="number"
+
+        android:textColor="@color/gris_claro"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNoExt" />
+
+    <TextView
+        android:id="@+id/txtCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/cp"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toEndOf="@+id/edtNoExt"
+        app:layout_constraintTop_toBottomOf="@+id/edtColonia" />
+
+    <EditText
+        android:id="@+id/edtCP"
+        android:layout_width="132dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/borde_redondeado"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="number"
+        android:textColor="@color/gris_claro"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtNoExt"
+        app:layout_constraintTop_toBottomOf="@+id/txtCP" />
+
+    <TextView
+        android:id="@+id/txtMunicipio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/muni"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNoExt" />
+
+    <EditText
+        android:id="@+id/edtMunicipio"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/borde_redondeado"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="text"
+        android:textColor="@color/gris_claro"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMunicipio" />
+
+    <TextView
+        android:id="@+id/txtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/estado"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtMunicipio" />
+
+    <EditText
+        android:id="@+id/edtEstado"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/borde_redondeado"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="text"
+        android:textColor="@color/gris_claro"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstado" />
+
+    <Button
+        android:id="@+id/btnGuardarDir"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/azul_intenso"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/btn_guardar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstado" />
+
+    <ImageButton
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/agregar"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtAgDir"
+        app:layout_constraintEnd_toStartOf="@+id/recycler1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDir"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler1"
+        android:layout_width="298dp"
+        android:layout_height="275dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toEndOf="@+id/btnAgregar"
+        app:layout_constraintTop_toBottomOf="@+id/txtDir" />
+
+    <Button
+        android:id="@+id/btnCancelarDir"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/gris_oscuro"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/btn_cancelar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarDir"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstado" />
+
+    <Button
+        android:id="@+id/btnCancelarActDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="48dp"
+        android:text="Cancelar"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstado" />
+
+    <Button
+        android:id="@+id/btnGuardarActDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:text="Guardar"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelarActDir"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstado" />
+
+    <Button
+        android:id="@+id/btnEliminarDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:text="Eliminar"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarActDir"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstado" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

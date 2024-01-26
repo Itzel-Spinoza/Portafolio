@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gris_muy_claro"
+        tools:context=".menuCategorias">
+
+
+    <Button
+        android:id="@+id/btnClasificarHombres"
+        android:layout_width="108dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/azul_intenso"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Hombre"
+
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/btnClasificarMujeres"
+        app:layout_constraintTop_toBottomOf="@+id/txtCat" />
+
+    <TextView
+        android:id="@+id/txtCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Categorías"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnClasificarMujeres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/azul_intenso"
+        android:fontFamily="@font/poppins_semibold"
+
+        android:text="Mujer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCat" />
+
+        <TextView
+            android:id="@+id/txtEtiquetaCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:text="Ropa mujer"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnClasificarMujeres" />
+
+        <ImageView
+            android:id="@+id/imgSudaderas"
+            android:layout_width="68dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/imgTops"
+            app:layout_constraintTop_toBottomOf="@+id/btnSueteres"
+            app:srcCompat="@drawable/sudadera_con_capucha" />
+
+        <Button
+            android:id="@+id/btnCamisas"
+            android:layout_width="116dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Camisas y blusas"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgCamisas" />
+
+        <Button
+            android:id="@+id/btnPantalones"
+            android:layout_width="132dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pantalones"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPantalones" />
+
+        <ImageView
+            android:id="@+id/imgJeans"
+            android:layout_width="70dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/imgFaldas"
+            app:layout_constraintTop_toBottomOf="@+id/btnShorts"
+            app:srcCompat="@drawable/pantalones__1_" />
+
+        <Button
+            android:id="@+id/btnShorts"
+            android:layout_width="99dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Shorts"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/btnPantalones"
+            app:layout_constraintTop_toBottomOf="@+id/imgShorts" />
+
+        <Button
+            android:id="@+id/btnSudaderas"
+            android:layout_width="137dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="68dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Sudaderas"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnTops"
+            app:layout_constraintTop_toBottomOf="@+id/imgSudaderas" />
+
+        <ImageView
+            android:id="@+id/imgCamisas"
+            android:layout_width="71dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTops"
+            app:srcCompat="@drawable/camisa" />
+
+        <ImageView
+            android:id="@+id/imgShorts"
+            android:layout_width="70dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/imgPantalones"
+            app:layout_constraintTop_toBottomOf="@+id/btnChamarras"
+            app:srcCompat="@drawable/shorts_de_bano" />
+
+        <Button
+            android:id="@+id/btnJeans"
+            android:layout_width="93dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Jeans"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/btnFaldas"
+            app:layout_constraintTop_toBottomOf="@+id/imgJeans" />
+
+        <ImageView
+            android:id="@+id/imgPantalones"
+            android:layout_width="60dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCamisas"
+            app:srcCompat="@drawable/pantalones" />
+
+        <ImageView
+            android:id="@+id/imgVestido"
+            android:layout_width="73dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEtiquetaCat"
+            app:srcCompat="@drawable/vestir" />
+
+        <Button
+            android:id="@+id/btnVestidos"
+            android:layout_width="112dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Vestidos"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgVestido" />
+
+        <Button
+            android:id="@+id/btnSueteres"
+            android:layout_width="128dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Suéteres"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnVestidos"
+            app:layout_constraintTop_toBottomOf="@+id/imgSueter" />
+
+        <ImageView
+            android:id="@+id/imgSueter"
+            android:layout_width="97dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSueteres"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toEndOf="@+id/imgVestido"
+            app:layout_constraintTop_toBottomOf="@+id/txtEtiquetaCat"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/__removebg_preview__1_" />
+
+        <ImageView
+            android:id="@+id/imgTops"
+            android:layout_width="61dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnVestidos"
+            app:srcCompat="@drawable/camisetas" />
+
+        <ImageView
+            android:id="@+id/imgChamarras"
+            android:layout_width="71dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/imgCamisas"
+            app:layout_constraintTop_toBottomOf="@+id/btnSudaderas"
+            app:srcCompat="@drawable/abrigo_acolchado" />
+
+        <Button
+            android:id="@+id/btnAccesorios"
+            android:layout_width="121dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Accesorios"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAccesorios" />
+
+        <ImageView
+            android:id="@+id/imgFaldas"
+            android:layout_width="64dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPantalones"
+            app:srcCompat="@drawable/falda_femenina" />
+
+        <Button
+            android:id="@+id/btnChamarras"
+            android:layout_width="129dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Chamarras y abrigos"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnCamisas"
+            app:layout_constraintTop_toBottomOf="@+id/imgChamarras" />
+
+        <Button
+            android:id="@+id/btnTops"
+            android:layout_width="113dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Tops"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgTops" />
+
+        <Button
+            android:id="@+id/btnFaldas"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Faldas"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFaldas" />
+
+        <ImageView
+            android:id="@+id/imgAccesorios"
+            android:layout_width="65dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnJeans"
+            app:srcCompat="@drawable/calcetines" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

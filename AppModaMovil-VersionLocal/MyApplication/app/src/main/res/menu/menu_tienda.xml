@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/hogar__4_"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/btnRopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/gancho_de_ropa__1_"
+        android:title="Ropa" />
+    <item
+        android:id="@+id/btnPedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/bolsa_de_la_compra__1_"
+        android:title="Pedidos" />
+</menu>
