@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".VentanaDonaciones"
+            android:exported="false" />
+        <activity
+            android:name=".VerPedidosCliente"
+            android:exported="false" />
+        <activity
+            android:name=".VentanaPedidoRealizado"
+            android:exported="false" />
+        <activity
+            android:name=".PasarelaPago"
+            android:exported="false" />
+        <activity
+            android:name=".PasarelaDireccion"
+            android:exported="false" />
+        <activity
+            android:name=".VerPrenda"
+            android:exported="false" />
+        <activity
+            android:name=".VerPrendasCategoria"
+            android:exported="false" />
+        <activity
+            android:name=".PedidosCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Carrito"
+            android:exported="false" />
+        <activity
+            android:name=".menuCategorias"
+            android:exported="false" />
+        <activity
+            android:name=".VerPedidos"
+            android:exported="false" />
+        <activity
+            android:name=".Donaciones"
+            android:exported="false" />
+        <activity
+            android:name=".Pedidos"
+            android:exported="false" />
+        <activity
+            android:name=".EditarPrenda"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarPrenda"
+            android:exported="false" />
+        <activity
+            android:name=".RopaVendedor"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarDatosPago"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarDirecciones"
+            android:exported="true" />
+        <activity
+            android:name=".CambiarContrasena"
+            android:exported="false" />
+        <activity
+            android:name=".EditarPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".MenuVendedor"
+            android:exported="false" />
+        <activity
+            android:name=".InicioVendedor"
+            android:exported="false" />
+        <activity
+            android:name=".MenuComprador1"
+            android:exported="true" />
+        <activity
+            android:name=".CuentaCreadaExitosa"
+            android:exported="false" />
+        <activity
+            android:name=".Inicio"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IniciarSesion" />
+        <activity android:name=".CrearCuenta" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

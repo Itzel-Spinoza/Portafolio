@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "190325522066",
+    "project_id": "moda-movil",
+    "storage_bucket": "moda-movil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190325522066:android:e554cdfdbd4f4dd1df704b",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvjQEje3P67D6csnYLS27xVus0HExY4Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

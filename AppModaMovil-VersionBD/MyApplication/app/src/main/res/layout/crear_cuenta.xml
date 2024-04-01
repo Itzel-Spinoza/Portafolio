@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondo_degradado3"
+        tools:context=".CrearCuenta">
+
+        <TextView
+            android:id="@+id/txtTipoCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/tipo_cuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grupo_genero" />
+
+        <TextView
+            android:id="@+id/etq_crear_cuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/btn_crear_cuenta"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtNombre"
+            style="@android:style/Widget.DeviceDefault.Light.AutoCompleteTextView"
+            android:layout_width="310dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="56dp"
+            android:height="48dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/nombre"
+            android:inputType="text"
+            android:textColor="@color/gris_claro"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etq_crear_cuenta" />
+
+        <EditText
+            android:id="@+id/edtApeMat"
+            android:layout_width="310dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:height="48dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/apemat"
+            android:inputType="text"
+            android:textColor="@color/gris_claro"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtApePat" />
+
+        <EditText
+            android:id="@+id/edtContrasena"
+            android:layout_width="310dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:height="48dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:textColor="@color/gris_claro"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="310dp"
+            android:layout_height="49dp"
+
+            android:layout_marginTop="20dp"
+            android:height="48dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/email"
+            android:inputType="text|textEmailAddress"
+            android:textColor="@color/gris_claro"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtApeMat" />
+
+        <EditText
+            android:id="@+id/edtApePat"
+            android:layout_width="310dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:height="48dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/apepat"
+            android:inputType="text"
+            android:textColor="@color/gris_claro"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+
+        <TextView
+            android:id="@+id/txtGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/genero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtContrasena" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/grupo_genero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGenero"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/btnHombre"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="120dp"
+                android:layout_height="51dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/gen_hom"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_separator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnMujer"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="120dp"
+                android:layout_height="51dp"
+                android:text="@string/gen_muj"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline_separator"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/grupo_tipoCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTipoCuenta"
+            tools:layout_editor_absoluteX="16dp">
+
+            <Button
+                android:id="@+id/btnComprador"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="148dp"
+                android:layout_height="51dp"
+                android:text="@string/tipo_comprador"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnVendedor"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="143dp"
+                android:layout_height="51dp"
+                android:text="@string/tipo_vendedor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="179dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/gris_oscuro"
+            android:elevation="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/btn_cancelar"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grupo_tipoCuenta" />
+
+        <Button
+            android:id="@+id/btnCrearCuenta"
+            android:layout_width="179dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/azul_intenso"
+            android:elevation="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/btn_crear_cuenta"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+            app:layout_constraintTop_toBottomOf="@+id/grupo_tipoCuenta" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/hogar__4_"
+        android:title="@string/btn_inicio" />
+    <item
+        android:id="@+id/menuRopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/percha_de_ropa"
+
+        android:title="@string/ropa" />
+    <item
+        android:id="@+id/menuCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/carrito_de_compras"
+
+        android:title="@string/btn_carrito" />
+
+</menu>

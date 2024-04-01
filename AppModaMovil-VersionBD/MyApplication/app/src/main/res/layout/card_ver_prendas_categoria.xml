@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="15dp">
+
+    <RelativeLayout
+        android:layout_width="173dp"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="112dp"
+            android:layout_height="175dp"
+            android:src="@drawable/imagennodisponible" />
+
+        <TextView
+            android:id="@+id/cardNombrePrenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView4"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/nom_pren"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cardTalla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cardNombrePrenda"
+            android:layout_marginStart="-111dp"
+            android:layout_marginBottom="-29dp"
+            android:layout_toEndOf="@+id/imageView4"
+            android:fontFamily="@font/poppins"
+            android:text="Talla:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cardPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/talla"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="-38dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/precio"
+            android:textColor="@color/azul_intenso"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cardTallaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardNombrePrenda"
+            android:layout_alignEnd="@+id/cardTalla"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="-23dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/talla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardNombrePrenda"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/cardTalla"
+            android:text="TextView" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

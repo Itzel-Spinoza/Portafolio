@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardPedido"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="15dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtIDPrenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID pedido:"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/cardIdPrenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtIDPrenda"
+            android:layout_marginEnd="-64dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtEstadoPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtIDPrenda"
+            android:layout_marginTop="9dp"
+            android:text="Estado:"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/estadoPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardIdPrenda"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/txtEstadoPedido"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtFechaaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEstadoPedido"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pedido el: " />
+
+        <TextView
+            android:id="@+id/fechaDelPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/estadoPedido"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/txtFechaaa"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtTotalPedidoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFechaaa"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Total pedido:" />
+
+        <TextView
+            android:id="@+id/totalPedidooo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fechaDelPedido"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/txtTotalPedidoCliente"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="$"
+            android:textColor="@color/azul_intenso" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

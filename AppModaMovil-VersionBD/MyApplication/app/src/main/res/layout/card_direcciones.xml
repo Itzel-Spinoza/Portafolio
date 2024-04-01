@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp"
+    android:layout_marginEnd="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/cardCalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/calle"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/cardColonia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardCalle"
+            android:layout_marginStart="-61dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/cardCalle"
+            android:text="@string/col"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/cardNoExt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardColonia"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_ext"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/cardCP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardNoExt"
+            android:layout_marginTop="13dp"
+            android:text="@string/cp"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/cardMunicipio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardCP"
+            android:layout_marginTop="15dp"
+            android:text="@string/muni"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/cardEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardMunicipio"
+            android:layout_marginTop="14dp"
+            android:text="@string/estado"
+            android:fontFamily="@font/poppins"/>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

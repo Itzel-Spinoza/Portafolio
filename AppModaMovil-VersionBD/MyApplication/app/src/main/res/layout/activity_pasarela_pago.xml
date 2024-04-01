@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PasarelaDireccion">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PasarelaPago">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AgregarDatosPago"
+        >
+
+        <TextView
+            android:id="@+id/txtMetodosPago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="@string/btn_datospago"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtAgMetPago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/agregar_nueva_tarj"
+            android:visibility="gone"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler2" />
+        <TextView
+            android:id="@+id/txtTipoTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="@string/tipo_tarj"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_semibold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAgMetPago" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/grupo_tipoTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTipoTarjeta"
+            app:singleSelection="true"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnTCredito"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="120dp"
+                android:layout_height="51dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/tarj_cred"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_separator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnTDebito"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="120dp"
+                android:layout_height="51dp"
+                android:text="@string/tarj_deb"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline_separator"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/txtNoTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/num_tarjeta"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grupo_tipoTarjeta" />
+
+        <EditText
+            android:id="@+id/edtNoTarjeta"
+            android:layout_width="306dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:inputType="number"
+            android:textColor="@color/gris_claro"
+            android:visibility="gone"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNoTarjeta" />
+
+        <TextView
+            android:id="@+id/txtTitularTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/nom_titular"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNoTarjeta" />
+
+        <EditText
+            android:id="@+id/edtTitularTarjeta"
+            android:layout_width="306dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:inputType="text"
+            android:textColor="@color/gris_claro"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitularTarjeta" />
+
+        <TextView
+            android:id="@+id/txtFechaExp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/fecha_exp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTitularTarjeta" />
+
+        <EditText
+            android:id="@+id/edtFechaExp"
+            android:layout_width="132dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borde_redondeado"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/gris_claro"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFechaExp" />
+
+        <TextView
+            android:id="@+id/txtCCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/ccv"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toEndOf="@+id/txtFechaExp"
+            app:layout_constraintTop_toBottomOf="@+id/edtTitularTarjeta" />
+
+        <EditText
+            android:id="@+id/edtCBB"
+            android:layout_width="132dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/borde_redondeado"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:inputType="numberPassword"
+            android:textColor="@color/gris_claro"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/edtFechaExp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCCB"
+            tools:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btnGuardarMet"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="135dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="90dp"
+            android:backgroundTint="@color/azul_intenso"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/btn_guardar"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtCBB"
+            tools:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btnAgregarMetodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="228dp"
+            android:backgroundTint="#00FFFFFF"
+
+            android:src="@drawable/agregar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="11dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler2"
+            android:layout_width="298dp"
+            android:layout_height="275dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toEndOf="@+id/btnAgregarMetodo"
+            app:layout_constraintTop_toBottomOf="@+id/txtMetodosPago" />
+
+        <Button
+            android:id="@+id/btnCancelarMet"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="135dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="90dp"
+            android:backgroundTint="@color/gris_oscuro"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/btn_cancelar"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnGuardarMet"
+            app:layout_constraintTop_toBottomOf="@+id/edtCBB"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tipoTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            android:text="Tipo de tarjeta:"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtFechaExp"
+            tools:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/spinTipoTarjeta"
+            android:layout_width="245dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipoTarjeta"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnGuardarCambiosTarj"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="90dp"
+            android:backgroundTint="@color/azul_intenso"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Guardar"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinTipoTarjeta"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnCancelarAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="90dp"
+            android:backgroundTint="@color/gris_oscuro"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Cancelar"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnGuardarCambiosTarj"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinTipoTarjeta"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnEliminarMetodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginBottom="90dp"
+            android:backgroundTint="@color/moradito"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Eliminar"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toEndOf="@+id/btnGuardarCambiosTarj"
+            app:layout_constraintTop_toBottomOf="@+id/spinTipoTarjeta"
+            tools:visibility="gone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_alignParentBottom="true"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="4dp"
+        app:hideOnScroll="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AgregarDirecciones"
+            >
+
+            <Button
+                android:id="@+id/btnContinuarPasDir"
+                android:layout_width="176dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:text="Finalizar pedido"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.673" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+</RelativeLayout>
