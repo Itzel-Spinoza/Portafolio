@@ -9,3 +9,7 @@ y como generar IDS, o realizar ciertas consultas.
 
 "PlataformaCursosEnWeb" 
 Prototipo básico de una plataforma realizada con HTML, JavaScript y PHP donde se suben cursos y lecciones. 
+
+"AppModaMovil-VersionLocal"
+Aplicación realizada para la materia de Desarrollo Móvil, que es una aplicación para la venta de ropa de segunda mano. Su funcionamiento consiste en que cualquier persona puede vender ropa, y donar un determinado porcentaje del precio de la prenda a una asociación benéfica de su elección. Los compradores pueden comprar esas prendas y visualizar la cantidad de dinero que su compra aporta a dicha asociación. Esta versión de la aplicación está realizada de forma local, por lo que no está conectada a una base de datos. 
+
