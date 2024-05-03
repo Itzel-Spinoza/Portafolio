@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LibreriaElBuho"
+        tools:targetApi="31"
+        android:enableOnBackInvokedCallback="true">
+        <activity
+            android:name=".VentanaAdminInventario"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_admin_inventario"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".InicioAdmin"
+            android:exported="false"
+            android:label="@string/title_activity_inicio_admin"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaPasarelaPago"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_pasarela_pago"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaPasarelaEnvio"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_pasarela_envio"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaLibros"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_libros"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaPerfil"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_perfil"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaCarritoCompra"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_carrito_compra"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaDetallesLibro"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_detalles_libro"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".MenuGeneros"
+            android:exported="false"
+            android:label="@string/title_activity_menu_generos"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".Inicio"
+            android:exported="false"
+            android:label="@string/title_activity_inicio"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".VentanaCrearCuenta"
+            android:exported="false"
+            android:label="@string/title_activity_ventana_crear_cuenta"
+            android:theme="@style/Theme.LibreriaElBuho" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LibreriaElBuho">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

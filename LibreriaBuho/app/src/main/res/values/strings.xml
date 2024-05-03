@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LibreriaElBuho</string>
+    <string name="title_activity_ventana_crear_cuenta">VentanaCrearCuenta</string>
+    <string name="title_activity_inicio">Inicio</string>
+    <string name="title_activity_menu_generos">MenuGeneros</string>
+    <string name="title_activity_ventana_detalles_libro">VentanaDetallesLibro</string>
+    <string name="title_activity_ventana_carrito_compra">VentanaCarritoCompra</string>
+    <string name="title_activity_ventana_perfil">VentanaPerfil</string>
+    <string name="title_activity_ventana_libros">VentanaLibros</string>
+    <string name="title_activity_ventana_pasarela_envio">VentanaPasarelaEnvio</string>
+    <string name="title_activity_ventana_pasarela_pago">VentanaPasarelaPago</string>
+    <string name="title_activity_inicio_admin">InicioAdmin</string>
+    <string name="title_activity_ventana_admin_inventario">VentanaAdminInventario</string>
+</resources>

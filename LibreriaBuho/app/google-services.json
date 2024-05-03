@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "895003374430",
+    "firebase_url": "https://elbuho-86724-default-rtdb.firebaseio.com",
+    "project_id": "elbuho-86724",
+    "storage_bucket": "elbuho-86724.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895003374430:android:6360c3727df3be6e1995cf",
+        "android_client_info": {
+          "package_name": "com.example.libreriaelbuho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADHHxcNjPxNLOgd4EvRORGzGUObqiE-Tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
