@@ -13,3 +13,8 @@ Prototipo básico de una plataforma realizada con HTML, JavaScript y PHP donde s
 "AppModaMovil-VersionLocal"
 Aplicación realizada para la materia de Desarrollo Móvil, que es una aplicación para la venta de ropa de segunda mano. Su funcionamiento consiste en que cualquier persona puede vender ropa, y donar un determinado porcentaje del precio de la prenda a una asociación benéfica de su elección. Los compradores pueden comprar esas prendas y visualizar la cantidad de dinero que su compra aporta a dicha asociación. Esta versión de la aplicación está realizada de forma local, por lo que no está conectada a una base de datos. 
 
+"LibreriaBuho"
+Aplicación realizada utilizando Jetpack Compose para la creación de las vistas. También se utilizó como lenguaje de programación Kotlin, y emplea un servicio web para manejar las operaciones, por medio del uso de una API REST. En la aplicación se realizan ventas de libros. 
+
+"RedNeuronal"
+Red neuronal en Python para determinar el rendimiento del almidón. Esta red fue realizada durante mi servicio social, debido a que estuve en un proyecto de investigación, el cual lleva por nombre "optimización del proceso de extracción de almidón del rizoma de la papata Canna Indica I utilizando técnicas de inteligencia artificial" 
