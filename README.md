@@ -21,3 +21,8 @@ Aplicación realizada utilizando Jetpack Compose para la creación de las vistas
 
 "RedNeuronal"
 Red neuronal en Python para determinar el rendimiento del almidón. Esta red fue realizada durante mi servicio social, debido a que estuve en un proyecto de investigación, el cual lleva por nombre "optimización del proceso de extracción de almidón del rizoma de la papata Canna Indica I utilizando técnicas de inteligencia artificial" 
+
+"App Museo Soumaya"
+Aplicación para la venta de boletos para un museo. La aplicación se realizó con Jetpack Compose y Kotlin. La base de datos que se realizó en Firebase, y se implementó la autentificación de usuarios con Firebase Authentication y el envío de notificaciones con Cloud Messaging. 
+
+
