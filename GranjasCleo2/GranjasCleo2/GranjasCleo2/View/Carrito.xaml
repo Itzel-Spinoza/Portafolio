@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GranjasCleo2.ViewModel"
+             x:Class="GranjasCleo2.View.Carrito">
+    <ContentPage.BindingContext>
+        <local:CarritoViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Carrito de Compras"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#333"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,20"/>
+
+            <CollectionView ItemsSource="{Binding ProductosCarrito}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10"
+                               HasShadow="True"
+                               Padding="10"
+                               BackgroundColor="White"
+                               Margin="10,5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Imagen}"
+                                       Aspect="AspectFit"
+                                       HeightRequest="100"
+                                       WidthRequest="100"
+                                       HorizontalOptions="Start"
+                                       Grid.Row="0"
+                                       Grid.RowSpan="4"
+                                       Grid.Column="0"/>
+                                <Label Text="{Binding NombreProducto}"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Start"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                       Margin="10,0,0,0"/>
+                                <Label Text="{Binding Cantidad, StringFormat='x {0}'}"
+                                       FontSize="14"
+                                       HorizontalOptions="Start"
+                                       Grid.Row="1"
+                                       Grid.Column="1"
+                                       Margin="10,0,0,0"/>
+                                <Grid Grid.Row="2" Grid.Column="1" Padding="10,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Precio Unitario:"
+                                           FontSize="14"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+                                    <Label Text="{Binding PrecioUnitario, StringFormat='${0:N2}'}"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"
+                                           Grid.Column="1"/>
+                                </Grid>
+                                <Grid Grid.Row="3" Grid.Column="1" Padding="10,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Subtotal:"
+                                           FontSize="14"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+                                    <Label Text="{Binding Subtotal, StringFormat='${0:N2}'}"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"
+                                           Grid.Column="1"/>
+                                </Grid>
+                                <ImageButton Source="https://i.ibb.co/02xvcVf/borrar-2.png"
+                                             WidthRequest="30"
+                                             HeightRequest="30"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Start"
+                                             BackgroundColor="Transparent"
+                                             Aspect="AspectFit"
+                                             Margin="0"
+                                             Grid.Row="0"
+                                             Grid.Column="1"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type local:CarritoViewModel}}, Path=EliminarProductoCommand}"
+                                             CommandParameter="{Binding .}"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Barra de compra fija -->
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="10" BackgroundColor="White" HorizontalOptions="FillAndExpand" HeightRequest="70">
+                <Grid VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Total:"
+                       FontSize="14"
+                       VerticalOptions="Center"/>
+                    <Label Text="{Binding Total, StringFormat='${0:N2}'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       Grid.Column="1"
+                       VerticalOptions="Center"/>
+                </Grid>
+                <BoxView HorizontalOptions="FillAndExpand" />
+                <Button Text="Continuar"
+                    BackgroundColor="#b7a841"
+                    TextColor="#fff"
+                    CornerRadius="10"
+                    WidthRequest="150"
+                    HorizontalOptions="End"
+                    Command="{Binding NavigateToAddAddressCommand}" />
+               
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

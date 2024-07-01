@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GranjasCleo2.View.AgregarDireccion"
+             BackgroundColor="#f5f5f5">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
+                <StackLayout Padding="20" Spacing="20">
+                    <Label Text="Datos de Envío"
+                           FontAttributes="Bold"
+                           FontSize="24"
+                           TextColor="#333"
+                           HorizontalOptions="Center" />
+
+                    <Frame CornerRadius="10" Padding="10" BackgroundColor="White" HasShadow="True">
+                        <StackLayout Padding="20" Spacing="20">
+                            <Entry Placeholder="Nombre completo" 
+                                   PlaceholderColor="#999"
+                                   TextColor="#333"
+                                   BackgroundColor="#fff"
+                                   HeightRequest="50"
+                                   Text="{Binding NombreCompleto}" />
+
+                            <Entry Placeholder="Calle" 
+                                   PlaceholderColor="#999"
+                                   TextColor="#333"
+                                   BackgroundColor="#fff"
+                                   HeightRequest="50"
+                                   Text="{Binding Calle}" />
+
+                            <Entry Placeholder="Colonia" 
+                                   PlaceholderColor="#999"
+                                   TextColor="#333"
+                                   BackgroundColor="#fff"
+                                   HeightRequest="50"
+                                   Text="{Binding Colonia}" />
+
+                            <Grid ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Entry Placeholder="No. exterior" 
+                                       PlaceholderColor="#999"
+                                       TextColor="#333"
+                                       BackgroundColor="#fff"
+                                       Keyboard="Numeric"
+                                       HeightRequest="50"
+                                       Text="{Binding NoExterior}"
+                                       Grid.Column="0" />
+
+                                <Entry Placeholder="C.P." 
+                                       PlaceholderColor="#999"
+                                       TextColor="#333"
+                                       BackgroundColor="#fff"
+                                       Keyboard="Numeric"
+                                       HeightRequest="50"
+                                       Text="{Binding CP}"
+                                       Grid.Column="1" />
+                            </Grid>
+
+                            <Entry Placeholder="Municipio" 
+                                   PlaceholderColor="#999"
+                                   TextColor="#333"
+                                   BackgroundColor="#fff"
+                                   HeightRequest="50"
+                                   Text="{Binding Municipio}" />
+
+                            <Entry Placeholder="Estado" 
+                                   PlaceholderColor="#999"
+                                   TextColor="#333"
+                                   BackgroundColor="#fff"
+                                   HeightRequest="50"
+                                   Text="{Binding Estado}" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Barra de compra fija -->
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10" BackgroundColor="White" HorizontalOptions="FillAndExpand" HeightRequest="70">
+                <Grid VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Total:"
+                       FontSize="14"
+                       VerticalOptions="Center"/>
+                    <Label Text="{Binding Total, StringFormat='${0:N2}'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       Grid.Column="1"
+                       VerticalOptions="Center"/>
+                </Grid>
+                <BoxView HorizontalOptions="FillAndExpand" />
+                <Button Text="Continuar"
+                        FontSize="12"
+                        BackgroundColor="#b7a841"
+                        TextColor="#fff"
+                        CornerRadius="10"
+                        WidthRequest="100"
+                        HorizontalOptions="End"
+                        Command="{Binding NavigateToAddCardCommand}" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

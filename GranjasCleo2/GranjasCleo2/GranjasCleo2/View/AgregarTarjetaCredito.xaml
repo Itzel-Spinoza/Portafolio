@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GranjasCleo2.ViewModel"
+             x:Class="GranjasCleo2.View.AgregarTarjetaCredito"
+             BackgroundColor="#fff">
+    <ContentPage.BindingContext>
+        <local:AgregarTarjetaViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Simulated Card -->
+            <Label Text="Datos de pago"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#333"
+                   HorizontalOptions="Center" />
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#b7a841">
+                <AbsoluteLayout>
+                    <!-- Background Image -->
+                    <Image Source="https://i.ibb.co/zPbmK5D/logo-Gallina.png" 
+                           Aspect="AspectFill" 
+                           AbsoluteLayout.LayoutFlags="All"
+                           AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+
+                    <!-- Card Content -->
+                    <StackLayout Padding="15" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Cleo Card"
+                               TextColor="White"
+                               FontSize="20"
+                               FontAttributes="Bold" />
+
+                        <Image Source="https://i.ibb.co/KwrDHCh/chip.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               HorizontalOptions="Start" />
+
+                        <Label Text="{Binding CardNumber}" 
+                               TextColor="White"
+                               FontSize="16"
+                               HorizontalOptions="Start" />
+                        <Label Text="{Binding CardHolderName}" 
+                               TextColor="White"
+                               FontSize="14"
+                               HorizontalOptions="Start" />
+
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Vertical" Grid.Column="0">
+                                <Label Text="Válida Hasta"
+                                       TextColor="White"
+                                       FontSize="16"
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding ExpiryDate, StringFormat='{0:MM/yy}'}" 
+                                       TextColor="White"
+                                       FontSize="14" />
+                            </StackLayout>
+                            <Image Source="https://i.ibb.co/h8ZCFTm/tarjeta.png"  
+                                   WidthRequest="70"
+                                   HeightRequest="70"
+                                   Grid.Column="1"
+                                   HorizontalOptions="End" />
+                        </Grid>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </Frame>
+
+            <!-- Input Fields -->
+            <Entry Placeholder="Nombre del Titular" 
+                   PlaceholderColor="#999"
+                   TextColor="#333"
+                   BackgroundColor="#fff"
+                   HeightRequest="50"
+                   Text="{Binding CardHolderName}" />
+
+            <Entry Placeholder="Número de Tarjeta" 
+                   PlaceholderColor="#999"
+                   TextColor="#333"
+                   BackgroundColor="#fff"
+                   HeightRequest="50"
+                   Keyboard="Numeric"
+                   Text="{Binding CardNumber}" />
+
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <DatePicker Format="MM/yy"
+                            TextColor="#999"
+                            BackgroundColor="#fff"
+                            HeightRequest="50"
+                            
+                            Date="{Binding ExpiryDate}"
+                            Grid.Column="0" />
+
+                <Entry Placeholder="CVV" 
+                       PlaceholderColor="#999"
+                       TextColor="#333"
+                       BackgroundColor="#fff"
+                       HeightRequest="50"
+                       Keyboard="Numeric"
+                       Text="{Binding CVV}"
+                       Grid.Column="1" />
+            </Grid>
+
+            <Button Text="Realizar pedido"
+                    BackgroundColor="#b7a841"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding RealizarPedidoCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GranjasCleo2.MainPage"
+             BackgroundColor="#b7a841">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+        
+        <Label Text="Bienvenid@ a"
+               TextColor="White" 
+         HorizontalOptions="Center"/>
+        <Label Text="Granjas Cleo" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" 
+               FontFamily="Arial" 
+               FontSize="30" 
+               TextColor="White" />
+        <Label Text="¡Despierta con Cleo! La frescura del campo directo a tu puerta." 
+                HorizontalTextAlignment="Center"
+               Padding="20"
+               FontSize="16" 
+               TextColor="White"/>
+        <!-- Imagen -->
+        <Image Source="https://i.ibb.co/PQxFMwK/logo-Gallina.png" HorizontalOptions="Center"
+               WidthRequest="300"
+               HeightRequest="300"/>
+        
+        <Button Text="Iniciar sesión" 
+                HorizontalOptions="Center" 
+                CornerRadius="50" 
+                BackgroundColor="White" 
+                TextColor="#b7a841" 
+                WidthRequest="300" 
+                Command="{Binding NavigateCommand}" 
+                CommandParameter="IniciarSesion"/>
+        <Button Text="Crear cuenta" 
+                HorizontalOptions="Center" 
+                CornerRadius="50" 
+                BackgroundColor="#e4dda1" 
+                TextColor="#fff" 
+                WidthRequest="300"
+                Command="{Binding NavigateCommand}" 
+                CommandParameter="CrearCuenta"/>
+    </StackLayout>
+
+
+</ContentPage>

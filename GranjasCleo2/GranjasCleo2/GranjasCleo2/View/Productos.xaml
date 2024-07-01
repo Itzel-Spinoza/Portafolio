@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GranjasCleo2.ViewModel"
+             x:Class="GranjasCleo2.View.Productos"
+             x:Name="thisPage">
+
+    <ContentPage.BindingContext>
+        <local:VerProductosViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Grid.Row="0" Padding="10">
+        <Label Text="Productos"
+               FontAttributes="Bold"
+               FontSize="16"
+               TextColor="#333"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"/>
+        <Frame Grid.Row="1" 
+               Padding="10,5" 
+               CornerRadius="20"
+               HasShadow="False">
+            <StackLayout Grid.Row="1" 
+                         Padding="10" 
+                         Orientation="Horizontal"
+                         Spacing="10">
+                <ImageButton Source="https://i.ibb.co/g42Ct9M/menu-principal.png" />
+                <Label Text="Todo" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="12"/>
+                <ImageButton Source="https://i.ibb.co/TYTnSQ9/huevos.png" />
+                <Label Text="Huevo" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="12"/>
+                <ImageButton Source="https://i.ibb.co/VJYXcw9/compost.png" />
+                <Label Text="Compost" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="12"/>
+                <ImageButton Source="https://i.ibb.co/j3GLbN6/ventas-en-linea.png" />
+                <Label Text="Merch" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="12"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Todo"
+               FontAttributes="Bold"
+               FontSize="14"
+               TextColor="#b7a841"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"/>
+        <CollectionView ItemsSource="{Binding Productos}"
+                        SelectionMode="None"
+                        Margin="10">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="2"
+                                 VerticalItemSpacing="10" 
+                                 HorizontalItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="10"
+                           HasShadow="True"
+                           Padding="10"
+                           BackgroundColor="White"
+                           Margin="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding NombreProducto}"
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Start"
+                                   Grid.Row="0"/>
+                            <Image Source="{Binding Imagen}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="150"
+                                   WidthRequest="150"
+                                   Grid.Row="1"/>
+                            <Grid Grid.Row="2"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="End"
+                                 Padding="5,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Precio, StringFormat='${0:N2}'}"
+                                       FontAttributes="Bold"
+                                       FontSize="12"
+                                       VerticalOptions="Center"
+                                       Grid.Column="0"/>
+                                <ImageButton Source="https://i.ibb.co/vDRKXQT/agregar.png" 
+                                             BackgroundColor="Transparent"
+                                            HeightRequest="30"
+                                            WidthRequest="30"
+                                            HorizontalOptions="End"
+                                            VerticalOptions="Center"
+                                            Grid.Column="1"
+                                            Margin="5"
+                                            Command="{Binding BindingContext.NavigateToDetailsCommand, Source={x:Reference thisPage}}"
+                                            CommandParameter="{Binding .}"/>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

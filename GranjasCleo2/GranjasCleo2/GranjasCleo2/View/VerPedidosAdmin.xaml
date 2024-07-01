@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GranjasCleo2.ViewModel"
+             x:Class="GranjasCleo2.View.VerPedidosAdmin">
+
+    <ContentPage.BindingContext>
+        <local:VerPedidosAdminViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Mis Pedidos"
+                  FontAttributes="Bold"
+                  FontSize="24"
+                  TextColor="#333"
+                  HorizontalOptions="Center"
+                  Margin="0,20,0,20"/>
+
+            <CollectionView ItemsSource="{Binding Pedidos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10"
+                              HasShadow="True"
+                              Padding="15"
+                              BackgroundColor="White"
+                              Margin="10,5">
+                            <StackLayout>
+                                <Label Text="{Binding IdPedido, StringFormat='Id:{0:N2}'}"
+                                      FontAttributes="Bold"
+                                      FontSize="18"
+                                      TextColor="#333"/>
+                                <Label Text="{Binding FechaPedido, StringFormat='Fecha pedido: {0:dd/MM/yyyy}'}"
+                                      FontSize="14"
+                                      TextColor="#666"/>
+                                <Label Text="{Binding TotalPedido, StringFormat='Costo: ${0:N2}'}"
+                                      FontSize="14"
+                                      TextColor="#666"/>
+                                <Button Text="Ver Detalles"
+                                       BackgroundColor="#b7a841"
+                                       TextColor="White"
+                                       Command="{Binding Source={RelativeSource AncestorType={x:Type local:VerPedidosAdminViewModel}}, Path=VerDetallesCommand}"
+                                       CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

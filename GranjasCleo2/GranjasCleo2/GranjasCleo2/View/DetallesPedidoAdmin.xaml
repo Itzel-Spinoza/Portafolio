@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GranjasCleo2.View.DetallesPedidoAdmin">
+    <ContentPage.Content>
+        
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <ScrollView Grid.Row="0">
+                    <StackLayout Padding="10">
+                        <Label Text="Detalles del pedido"
+                         FontAttributes="Bold"
+                         FontSize="24"
+                         TextColor="#333"
+                         HorizontalOptions="Center"
+                         Margin="0,20,0,20"/>
+
+                        <Frame Padding="15" CornerRadius="10" BackgroundColor="White" HasShadow="True">
+                            <StackLayout Spacing="10">
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Cliente:" 
+                                     FontAttributes="Bold" 
+                                     FontSize="16" 
+                                     TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.NombreCliente}" 
+                                     FontSize="16" 
+                                     TextColor="#333"
+                                     Grid.Column="1"/>
+                                </Grid>
+                            <Grid ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Correo:" 
+                                     FontAttributes="Bold" 
+                                     FontSize="16" 
+                                     TextColor="#333"/>
+                                <Label Text="{Binding Pedido.CorreoCliente}" 
+                                     FontSize="16" 
+                                     TextColor="#333"
+                                     Grid.Column="1"/>
+                            </Grid>
+                            <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Dirección:" 
+                                     FontAttributes="Bold" 
+                                     FontSize="16" 
+                                     TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.Calle}"
+                                     FontSize="16" 
+                                     TextColor="#333"
+                                     Grid.Column="1"/>
+                                </Grid>
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Colonia:" 
+                             FontAttributes="Bold" 
+                             FontSize="16" 
+                             TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.Colonia}"
+                             FontSize="16" 
+                             TextColor="#333"
+                             Grid.Column="1"/>
+                                </Grid>
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="No. exterior:" 
+                                 FontAttributes="Bold" 
+                                 FontSize="16" 
+                                 TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.NoExterior}"
+                                 FontSize="16" 
+                                 TextColor="#333"
+                                 Grid.Column="1"/>
+                                </Grid>
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="C.P:" 
+                                 FontAttributes="Bold" 
+                                 FontSize="16" 
+                                 TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.CP}"
+                                 FontSize="16" 
+                                 TextColor="#333"
+                                 Grid.Column="1"/>
+                                </Grid>
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Municipio:" 
+                                 FontAttributes="Bold" 
+                                 FontSize="16" 
+                                 TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.Municipio}"
+                                 FontSize="16" 
+                                 TextColor="#333"
+                                 Grid.Column="1"/>
+                                </Grid>
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Estado:" 
+                                 FontAttributes="Bold" 
+                                 FontSize="16" 
+                                 TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.Estado}"
+                                 FontSize="16" 
+                                 TextColor="#333"
+                                 Grid.Column="1"/>
+                                </Grid>
+
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Fecha Pedido:" 
+                                     FontAttributes="Bold" 
+                                     FontSize="16" 
+                                     TextColor="#333"/>
+                                    <Label Text="{Binding Pedido.FechaPedido}" 
+                                     FontSize="16" 
+                                     TextColor="#333"
+                                     Grid.Column="1"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="Productos:" 
+                         FontAttributes="Bold" 
+                         FontSize="18" 
+                         TextColor="#333"
+                         Margin="10,20,0,0"/>
+
+                        <CollectionView ItemsSource="{Binding Productos}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame Padding="10" CornerRadius="10" BackgroundColor="#fff" HasShadow="True" Margin="10,5">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="{Binding ImagenPedido}"
+                                             WidthRequest="100"
+                                             HeightRequest="100"
+                                             VerticalOptions="Center"/>
+
+                                            <StackLayout Spacing="5" Padding="10">
+
+                                                <Label Text="{Binding NombreProducto}" 
+                                                 FontAttributes="Bold" 
+                                                 FontSize="14" 
+                                                 TextColor="#333"/>
+                                                <Grid Grid.Row="3" Grid.Column="1" Padding="10,0,0,0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="{Binding Cantidad, StringFormat='x{0}'}" 
+                                                 FontAttributes="None" 
+                                                 FontSize="14" 
+                                                 TextColor="#333"/>
+                                                </Grid>
+                                                <Grid Grid.Row="3" Grid.Column="1" Padding="10,0,0,0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="Precio unitario:"
+                                                 FontSize="14"
+                                                 TextColor="#000"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Center"/>
+                                                    <Label Text="{Binding Subtotal, StringFormat='${0:N2}'}"
+                                                 FontAttributes="Bold"
+                                                 FontSize="14"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Center"
+                                                 Grid.Column="1"/>
+                                                </Grid>
+                                                <Grid Grid.Row="3" Grid.Column="1" Padding="10,0,0,0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="Subtotal:"
+                                                 FontSize="14"
+                                                 TextColor="#000"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Center"/>
+                                                    <Label Text="{Binding Subtotal, StringFormat='${0:N2}'}"
+                                                 FontAttributes="Bold"
+                                                 FontSize="14"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Center"
+                                                 Grid.Column="1"/>
+                                                </Grid>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </ScrollView>
+
+                <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10" BackgroundColor="#b7a841" HorizontalOptions="FillAndExpand" HeightRequest="70">
+                    <Grid VerticalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Total pedido:"
+                         FontSize="14"
+                         TextColor="#fff"
+                         VerticalOptions="Center"/>
+                        <Label Text="{Binding Pedido.TotalPedido, StringFormat='${0:N2}'}"
+                         FontSize="14"
+                         FontAttributes="Bold"
+                         TextColor="#fff"
+                         Grid.Column="1"
+                         VerticalOptions="Center"/>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GranjasCleo2.ViewModel"
+             x:Class="GranjasCleo2.View.AgregarProducto">
+
+    <ContentPage.BindingContext>
+        <local:AgregarProductoViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
+                <StackLayout Padding="20" Spacing="20">
+                    <Label Text="Datos del producto"
+                          FontAttributes="Bold"
+                          FontSize="24"
+                          TextColor="#333"
+                          HorizontalOptions="Center" />
+
+                    <Frame CornerRadius="10" Padding="10" BackgroundColor="White" HasShadow="True">
+                        <StackLayout Padding="20" Spacing="20">
+                            <Entry Placeholder="Nombre producto" 
+                                  PlaceholderColor="#999"
+                                  TextColor="#333"
+                                  BackgroundColor="#fff"
+                                  HeightRequest="50"
+                                  Text="{Binding NombreProducto}" />
+                            <Entry Placeholder="URL de la imagen" 
+                                  PlaceholderColor="#999"
+                                  TextColor="#333"
+                                  BackgroundColor="#fff"
+                                  HeightRequest="50"
+                                  Text="{Binding Imagen}" />
+                            <Entry Placeholder="Categoría" 
+                                  PlaceholderColor="#999"
+                                  TextColor="#333"
+                                  BackgroundColor="#fff"
+                                  HeightRequest="50"
+                                  Text="{Binding CategoriaProducto}" />
+
+                            <Entry Placeholder="Descripción" 
+                                  PlaceholderColor="#999"
+                                  TextColor="#333"
+                                  BackgroundColor="#fff"
+                                  HeightRequest="50"
+                                  Text="{Binding Descripcion}" />
+
+                            <Grid ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Entry Placeholder="Precio" 
+                                      PlaceholderColor="#999"
+                                      TextColor="#333"
+                                      BackgroundColor="#fff"
+                                      HeightRequest="50"
+                                      Keyboard="Numeric" 
+                                      Text="{Binding Precio}"
+                                      Grid.Column="0" />
+
+                                <Entry Placeholder="Stock" 
+                                      PlaceholderColor="#999"
+                                      TextColor="#333"
+                                      BackgroundColor="#fff"
+                                      HeightRequest="50"
+                                      Keyboard="Numeric"
+                                      Text="{Binding Stock}"
+                                      Grid.Column="1" />
+                            </Grid>
+
+                            <Entry Placeholder="Subcategoría" 
+                                  PlaceholderColor="#999"
+                                  TextColor="#333"
+                                  BackgroundColor="#fff"
+                                  HeightRequest="50"
+                                  Text="{Binding Subcategoria}" />
+
+                            <Button Text="Guardar"
+                               FontSize="12"
+                               BackgroundColor="#b7a841"
+                               TextColor="#fff"
+                               CornerRadius="10"
+                               WidthRequest="300"
+                               HorizontalOptions="Center"
+                               Command="{Binding GuardarProductoCommand}" />
+                            <Button Text="Limpiar"
+                               FontSize="12"
+                               BackgroundColor="#999"
+                               TextColor="#fff"
+                               CornerRadius="10"
+                               WidthRequest="300"
+                               HorizontalOptions="Center"
+                               Command="{Binding LimpiarCamposCommand}" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
