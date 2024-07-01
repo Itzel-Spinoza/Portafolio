@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MuseoSoumaya</string>
+    <string name="title_activity_ventana_login">VentanaLogin</string>
+    <string name="title_activity_vista_crear_cuenta">VistaCrearCuenta</string>
+    <string name="title_activity_vista_inicio">VistaInicio</string>
+    <string name="title_activity_vista_obrasde_arte">VistaObrasdeArte</string>
+    <string name="title_activity_vista_boletos">VistaBoletos</string>
+    <string name="title_activity_vista_inicio_admin">VistaInicioAdmin</string>
+    <string name="title_activity_vista_perfil">VistaPerfil</string>
+</resources>

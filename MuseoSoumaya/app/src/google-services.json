@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "695399797254",
+    "project_id": "museosoumaya-a210f",
+    "storage_bucket": "museosoumaya-a210f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695399797254:android:afb705e9cf4db30b5d6987",
+        "android_client_info": {
+          "package_name": "com.example.museosoumaya"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8QrGoHGC8Ll6BAdrGUQfHIxfTXHBwrrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
